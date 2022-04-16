@@ -21,6 +21,7 @@ const mapResponseToMissions = (res: any): Mission[] => {
       },
       missionPatch: val?.links?.mission_patch || "",
       launchYear: val?.launch_year || 0,
+      launchSuccess:val?.launch_success
     };
     return mission;
   });

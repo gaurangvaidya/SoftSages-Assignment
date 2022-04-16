@@ -1,0 +1,17 @@
+.homePageContainer {
+    display:flex;
+    flex-direction: column;
+    height:100vh;
+    width: 100vw;
+    row-gap: 1rem;
+}
+.homePageContainer > header {
+    width: 100%;
+    height: 10%;
+    display:flex;
+}
+
+.homePageContainer > main {
+    height: 90%;
+    width: 100%;
+}

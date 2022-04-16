@@ -9,6 +9,7 @@ export interface Mission {
     launchDateLocale:string;
     rocket:Rocket;
     missionPatch:string;
+    launchSuccess:boolean;
 }
 export interface Rocket{
     rocketId:string;
