@@ -9,7 +9,7 @@ export interface MissonCardProps {
 
 const MissionCard: React.FC<MissonCardProps> = ({ missionData }) => {
   return (
-    <Card sx={{ minWidth: 275 }}>
+    <Card variant="outlined">
       <CardContent>
       <CardMedia
         component="img"

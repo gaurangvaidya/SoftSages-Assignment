@@ -38,6 +38,7 @@ export const fetchMission = () => {
       if (response && response.data) {
         missions = mapResponseToMissions(response);
         dispatch(missionActions.replaceMissions(missions));
+        dispatch(missionActions.storeOriginalMissions(missions));
       }
     } catch (error: any) {
       console.log(error);

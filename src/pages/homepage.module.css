@@ -4,11 +4,16 @@
     height:100vh;
     width: 100vw;
     row-gap: 1rem;
+    background: linear-gradient(to right, #a8c0ff, #3f2b96);
+
 }
 .homePageContainer > header {
     width: 100%;
     height: 10%;
     display:flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 2rem;
 }
 
 .homePageContainer > main {
