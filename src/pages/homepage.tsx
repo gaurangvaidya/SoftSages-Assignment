@@ -10,9 +10,9 @@ import filterSlice, { FilterFormState } from "../store/filter/filter.slice";
 import moment from "moment";
 import { missionActions } from "../store/mission/mission.slice";
 
-function toCheckName(missionName: string, enteredName: string): boolean {
+function toCheckName(rocketName: string, enteredName: string): boolean {
   if (
-    missionName.toLocaleLowerCase().includes(enteredName.toLocaleLowerCase())
+    rocketName.toLocaleLowerCase().includes(enteredName.toLocaleLowerCase())
   ) {
     return true;
   }
@@ -91,7 +91,7 @@ const HomePage = () => {
         if (
           (!filters.searchText ||
             (filters.searchText &&
-              toCheckName(val.missionName, filters.searchText))) &&
+              toCheckName(val.rocket.rocketName, filters.searchText))) &&
           (!filters.timeFilter ||
             (filters.timeFilter &&
               filters.timeFilter === "lastWeek" &&
