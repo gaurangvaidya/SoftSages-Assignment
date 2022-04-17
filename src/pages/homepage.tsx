@@ -1,12 +1,12 @@
 import { useEffect, useRef } from "react";
 import { useAppDispatch, useAppSelector } from "../store/hooks";
 import { fetchMission } from "../store/mission/mission.actions";
-import { Container, Grid } from "@mui/material";
+import {  Grid } from "@mui/material";
 import { Mission } from "../constants/mission.model";
 import MissionCard from "../component/missioncard/missoncard";
 import styles from "./homepage.module.css";
 import TopBar from "../component/topbar/topbar";
-import filterSlice, { FilterFormState } from "../store/filter/filter.slice";
+import  { FilterFormState } from "../store/filter/filter.slice";
 import moment from "moment";
 import { missionActions } from "../store/mission/mission.slice";
 
@@ -113,7 +113,7 @@ const HomePage = () => {
       return toReturn;
     });
     dispatch(missionActions.replaceMissions(filteredMissions));
-  }, [filters,dispatch]);
+  }, [filters,dispatch,originalMissions]);
 
   const renderItems = (): any => {
     return missions.map((val: Mission, index) => {
